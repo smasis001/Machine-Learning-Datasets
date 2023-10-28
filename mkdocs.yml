@@ -1,0 +1,17 @@
+site_name: Documentation to Machine Learning Datasets Package 0.1.23
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - MLDatasets Docs: index.md
+  - Reference:
+    - Config: reference/config.md
+    - Common: reference/common.md
+    - Preprocess: reference/preprocess.md
+    - Evaluate: reference/evaluate.md
+    - Interpret: reference/interpret.md
+    - Deprecated: reference/deprecated.md

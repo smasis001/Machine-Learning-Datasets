@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: machine-learning-datasets
+Version: 0.1.23
+Summary: A simple library for loading machine learning datasets and performing some common machine learning interpretation functions. Built for the book "Interpretable Machine Learning with Python, 2E".
+License: MIT
+Author: Serg Masís
+Author-email: smasis@hawk.iit.edu
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: matplotlib (>=3.7.1,<4.0.0)
+Requires-Dist: numpy (>=1.23.5,<2.0.0)
+Requires-Dist: opencv-python (>=4.8.0.76,<5.0.0)
+Requires-Dist: pandas (>=1.5.3,<2.0.0)
+Requires-Dist: scikit-learn (>=1.2.2,<2.0.0)
+Requires-Dist: scipy (>=1.11.3,<2.0.0)
+Requires-Dist: seaborn (>=0.12.2,<0.13.0)
+Requires-Dist: torchvision (>=0.16.0,<0.17.0)
