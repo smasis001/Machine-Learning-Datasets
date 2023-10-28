@@ -1,0 +1,2757 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../preprocess/">
+      
+      
+        <link rel="next" href="../interpret/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>Evaluate - Documentation to Machine Learning Datasets Package 0.1.23</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#machine_learning_datasets.evaluate" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation to Machine Learning Datasets Package 0.1.23" class="md-header__button md-logo" aria-label="Documentation to Machine Learning Datasets Package 0.1.23" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation to Machine Learning Datasets Package 0.1.23
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evaluate
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation to Machine Learning Datasets Package 0.1.23" class="md-nav__button md-logo" aria-label="Documentation to Machine Learning Datasets Package 0.1.23" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentation to Machine Learning Datasets Package 0.1.23
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLDatasets Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preprocess
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Evaluate
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Evaluate
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate" class="md-nav__link">
+    evaluate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_class_mdl" class="md-nav__link">
+    evaluate_class_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_class_metrics_mdl" class="md-nav__link">
+    evaluate_class_metrics_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_multiclass_mdl" class="md-nav__link">
+    evaluate_multiclass_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_multiclass_metrics_mdl" class="md-nav__link">
+    evaluate_multiclass_metrics_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_reg_mdl" class="md-nav__link">
+    evaluate_reg_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_reg_metrics_mdl" class="md-nav__link">
+    evaluate_reg_metrics_mdl()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpret/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpret
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deprecated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deprecated
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate" class="md-nav__link">
+    evaluate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_class_mdl" class="md-nav__link">
+    evaluate_class_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_class_metrics_mdl" class="md-nav__link">
+    evaluate_class_metrics_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_multiclass_mdl" class="md-nav__link">
+    evaluate_multiclass_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_multiclass_metrics_mdl" class="md-nav__link">
+    evaluate_multiclass_metrics_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_reg_mdl" class="md-nav__link">
+    evaluate_reg_mdl()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine_learning_datasets.evaluate.evaluate_reg_metrics_mdl" class="md-nav__link">
+    evaluate_reg_metrics_mdl()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Evaluate</h1>
+
+<p>This is the reference to the functions contained in
+<code>evaluate</code>. For now, they are all accesible directly
+through <code>machine-learning-datasets</code> and you don't
+need to use the <code>evaluate</code> namespace.</p>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="machine_learning_datasets.evaluate"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Common Utility Functions</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="machine_learning_datasets.evaluate.evaluate_class_mdl" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">evaluate_class_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">plot_roc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">plot_conf_matrix</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pct_matrix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">predopts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_summary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ret_eval_dict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">save_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Evaluate the performance of a classification model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fitted_model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseModelProtocol" href="../common/#machine_learning_datasets.common.BaseModelProtocol">BaseModelProtocol</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The fitted classification model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>X_train</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The training data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>X_test</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The testing data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_train</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The labels for the training data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The labels for the testing data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plot_roc</code></td>
+          <td>
+                <code>Optional[bool], default=True</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to plot the ROC curve.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plot_conf_matrix</code></td>
+          <td>
+                <code>Optional[bool], default=False</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to plot the confusion matrix.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>pct_matrix</code></td>
+          <td>
+                <code>Optional[bool], default=True</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to display the confusion matrix as
+                                       percentages.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>predopts</code></td>
+          <td>
+                <code>Optional[Dict], default=None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional options for predicting probabilities.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>show_summary</code></td>
+          <td>
+                <code>Optional[bool], default=True</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to display the evaluation summary.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ret_eval_dict</code></td>
+          <td>
+                <code>Optional[bool], default=False</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to return the evaluation metrics
+                                           as a dictionary.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>save_name</code></td>
+          <td>
+                <code>Optional[str], default=None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name to save the plots.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.Tuple">Tuple</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, <span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, <span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Union[Dict, Tuple[ArrayLike, ArrayLike, ArrayLike]]: If <code>ret_eval_dict</code> is True,
+                        returns a dictionary of evaluation metrics. Otherwise,
+                        returns a tuple of the predicted labels for the training
+                        data, the predicted probabilities for the testing data,
+                        and the predicted labels for the testing data.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>machine_learning_datasets/evaluate.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_class_mdl</span><span class="p">(</span>
+        <span class="n">fitted_model</span><span class="p">:</span><span class="n">BaseModelProtocol</span><span class="p">,</span>
+        <span class="n">X_train</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">X_test</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_train</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">plot_roc</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">plot_conf_matrix</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">pct_matrix</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">predopts</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">show_summary</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">ret_eval_dict</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_name</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span><span class="n">Tuple</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluate the performance of a classification model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fitted_model (BaseModelProtocol): The fitted classification model.</span>
+<span class="sd">        X_train (ArrayLike): The training data.</span>
+<span class="sd">        X_test (ArrayLike): The testing data.</span>
+<span class="sd">        y_train (ArrayLike): The labels for the training data.</span>
+<span class="sd">        y_test (ArrayLike): The labels for the testing data.</span>
+<span class="sd">        plot_roc (Optional[bool], default=True): Whether to plot the ROC curve.</span>
+<span class="sd">        plot_conf_matrix (Optional[bool], default=False): Whether to plot the confusion matrix.</span>
+<span class="sd">        pct_matrix (Optional[bool], default=True): Whether to display the confusion matrix as</span>
+<span class="sd">                                                   percentages.</span>
+<span class="sd">        predopts (Optional[Dict], default=None): Additional options for predicting probabilities.</span>
+<span class="sd">        show_summary (Optional[bool], default=True): Whether to display the evaluation summary.</span>
+<span class="sd">        ret_eval_dict (Optional[bool], default=False): Whether to return the evaluation metrics</span>
+<span class="sd">                                                       as a dictionary.</span>
+<span class="sd">        save_name (Optional[str], default=None): The name to save the plots.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Union[Dict, Tuple[ArrayLike, ArrayLike, ArrayLike]]: If `ret_eval_dict` is True,</span>
+<span class="sd">                                    returns a dictionary of evaluation metrics. Otherwise,</span>
+<span class="sd">                                    returns a tuple of the predicted labels for the training</span>
+<span class="sd">                                    data, the predicted probabilities for the testing data,</span>
+<span class="sd">                                    and the predicted labels for the testing data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">predopts</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">predopts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="o">**</span><span class="n">predopts</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y_train_pred</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_train_pred</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">y_test_prob</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="o">**</span><span class="n">predopts</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+        <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_test_prob</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y_test_prob</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="o">**</span><span class="n">predopts</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_test_prob</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">roc_auc</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">plot_roc</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+        <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;ROC curve (area = </span><span class="si">{</span><span class="n">roc_auc</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span>  <span class="c1"># coin toss line</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positive Rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">save_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_name</span><span class="o">+</span><span class="s1">&#39;_roc.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">plot_conf_matrix</span><span class="p">:</span>
+        <span class="n">cf_matrix</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span>\
+                                             <span class="n">y_test_pred</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">pct_matrix</span><span class="p">:</span>
+            <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cf_matrix</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cf_matrix</span><span class="p">),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>\
+                        <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.2%&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cf_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>\
+                        <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">})</span>
+        <span class="k">if</span> <span class="n">save_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_name</span><span class="o">+</span><span class="s1">&#39;_cm.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">show_summary</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy_train:  </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="n">y_train_pred</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\t\t</span><span class="s2">&quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;Accuracy_test:   </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_test_pred</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Precision_test:  </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_test_pred</span><span class="p">,</span><span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">Recall_test:     </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_test_pred</span><span class="p">,</span><span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ROC-AUC_test:    </span><span class="si">{</span><span class="n">roc_auc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\t\t</span><span class="s2">&quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;F1_test:         </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_test_pred</span><span class="p">,</span><span class="w"> </span><span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\t\t</span><span class="s2">&quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;MCC_test: </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">matthews_corrcoef</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_test_pred</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ret_eval_dict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">evaluate_class_metrics_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span>\
+                                          <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">,</span> <span class="n">y_test_pred</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="machine_learning_datasets.evaluate.evaluate_class_metrics_mdl" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">evaluate_class_metrics_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Evaluate the classification metrics for a fitted model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fitted_model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseModelProtocol" href="../common/#machine_learning_datasets.common.BaseModelProtocol">BaseModelProtocol</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The fitted model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_train_pred</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The predicted labels for the training set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test_prob</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The predicted probabilities for the test set. Can be None.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test_pred</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The predicted labels for the test set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_train</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The true labels for the training set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The true labels for the test set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>dict</code></td>          <td>
+                <code><span title="typing.Dict">Dict</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A dictionary containing the evaluation metrics:
+- 'fitted': The fitted model.
+- 'preds_train': The predicted labels for the training set.
+- 'probs_test' (optional): The predicted probabilities for the test set.
+- 'preds_test': The predicted labels for the test set.
+- 'accuracy_train': The accuracy score for the training set.
+- 'accuracy_test': The accuracy score for the test set.
+- 'precision_train': The precision score for the training set.
+- 'precision_test': The precision score for the test set.
+- 'recall_train': The recall score for the training set.
+- 'recall_test': The recall score for the test set.
+- 'f1_train': The F1 score for the training set.
+- 'f1_test': The F1 score for the test set.
+- 'mcc_train': The Matthews correlation coefficient for the training set.
+- 'mcc_test': The Matthews correlation coefficient for the test set.
+- 'roc-auc_test' (optional): The ROC AUC score for the test set.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>machine_learning_datasets/evaluate.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_class_metrics_mdl</span><span class="p">(</span>
+        <span class="n">fitted_model</span><span class="p">:</span><span class="n">BaseModelProtocol</span><span class="p">,</span>
+        <span class="n">y_train_pred</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test_prob</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test_pred</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_train</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test</span><span class="p">:</span><span class="n">ArrayLike</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluate the classification metrics for a fitted model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fitted_model (BaseModelProtocol): The fitted model.</span>
+<span class="sd">        y_train_pred (ArrayLike): The predicted labels for the training set.</span>
+<span class="sd">        y_test_prob (ArrayLike): The predicted probabilities for the test set. Can be None.</span>
+<span class="sd">        y_test_pred (ArrayLike): The predicted labels for the test set.</span>
+<span class="sd">        y_train (ArrayLike): The true labels for the training set.</span>
+<span class="sd">        y_test (ArrayLike): The true labels for the test set.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: A dictionary containing the evaluation metrics:</span>
+<span class="sd">            - &#39;fitted&#39;: The fitted model.</span>
+<span class="sd">            - &#39;preds_train&#39;: The predicted labels for the training set.</span>
+<span class="sd">            - &#39;probs_test&#39; (optional): The predicted probabilities for the test set.</span>
+<span class="sd">            - &#39;preds_test&#39;: The predicted labels for the test set.</span>
+<span class="sd">            - &#39;accuracy_train&#39;: The accuracy score for the training set.</span>
+<span class="sd">            - &#39;accuracy_test&#39;: The accuracy score for the test set.</span>
+<span class="sd">            - &#39;precision_train&#39;: The precision score for the training set.</span>
+<span class="sd">            - &#39;precision_test&#39;: The precision score for the test set.</span>
+<span class="sd">            - &#39;recall_train&#39;: The recall score for the training set.</span>
+<span class="sd">            - &#39;recall_test&#39;: The recall score for the test set.</span>
+<span class="sd">            - &#39;f1_train&#39;: The F1 score for the training set.</span>
+<span class="sd">            - &#39;f1_test&#39;: The F1 score for the test set.</span>
+<span class="sd">            - &#39;mcc_train&#39;: The Matthews correlation coefficient for the training set.</span>
+<span class="sd">            - &#39;mcc_test&#39;: The Matthews correlation coefficient for the test set.</span>
+<span class="sd">            - &#39;roc-auc_test&#39; (optional): The ROC AUC score for the test set.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">eval_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;fitted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitted_model</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;preds_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_train_pred</span>
+    <span class="k">if</span> <span class="n">y_test_prob</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;probs_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test_prob</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;preds_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test_pred</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;accuracy_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;accuracy_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;precision_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;precision_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;recall_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;recall_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;f1_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;f1_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;mcc_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">matthews_corrcoef</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;mcc_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">matthews_corrcoef</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">y_test_prob</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;roc-auc_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">eval_dict</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="machine_learning_datasets.evaluate.evaluate_multiclass_mdl" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">evaluate_multiclass_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_l</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ohe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">plot_roc</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">plot_roc_class</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">plot_conf_matrix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pct_matrix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">plot_class_report</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ret_eval_dict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">predopts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">save_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Evaluate a multiclass classification model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fitted_model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseModelProtocol" href="../common/#machine_learning_datasets.common.BaseModelProtocol">BaseModelProtocol</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The fitted model to evaluate.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, <span title="torchvision.datasets.DatasetFolder">DatasetFolder</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input data for evaluation.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The true labels for evaluation. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>class_l</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[list]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The list of class labels. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ohe</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseTransformerProtocol" href="../common/#machine_learning_datasets.common.BaseTransformerProtocol">BaseTransformerProtocol</a>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The one-hot encoder for labels. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plot_roc</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to plot ROC curves. Default is False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plot_roc_class</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to plot ROC curves for each class. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plot_conf_matrix</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to plot the confusion matrix. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>pct_matrix</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to display the confusion matrix as percentages.
+                         Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plot_class_report</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to print the classification report. Default is
+                                True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ret_eval_dict</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to return evaluation metrics as a dictionary.
+                            Default is False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>predopts</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional options for prediction. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>save_name</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name to save the plots. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.Tuple">Tuple</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, <span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Union[Dict,Tuple[ArrayLike, ArrayLike]]: The evaluation metrics or predicted labels
+                                     and probabilities.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>TypeError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the data is not in the right format.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code>TypeError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If sklearn one-hot encoder is not provided when labels aren't already encoded.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the labels don't have dimensions that match the classes.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the list of classes provided doesn't match the dimensions of model
+        predictions.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>machine_learning_datasets/evaluate.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_multiclass_mdl</span><span class="p">(</span>
+        <span class="n">fitted_model</span><span class="p">:</span><span class="n">BaseModelProtocol</span><span class="p">,</span>
+        <span class="n">X</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">,</span><span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">DatasetFolder</span><span class="p">],</span>
+        <span class="n">y</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">class_l</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">ohe</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="n">BaseTransformerProtocol</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">plot_roc</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">plot_roc_class</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">plot_conf_matrix</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">pct_matrix</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">plot_class_report</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">ret_eval_dict</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">predopts</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">save_name</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span><span class="n">Tuple</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Evaluate a multiclass classification model.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        fitted_model (BaseModelProtocol): The fitted model to evaluate.</span>
+<span class="sd">        X (Union[ArrayLike,torchvision.datasets.DatasetFolder]): The input data for evaluation.</span>
+<span class="sd">        y (Optional[ArrayLike]): The true labels for evaluation. Default is None.</span>
+<span class="sd">        class_l (Optional[list]): The list of class labels. Default is None.</span>
+<span class="sd">        ohe (Optional[BaseTransformerProtocol]): The one-hot encoder for labels. Default is None.</span>
+<span class="sd">        plot_roc (Optional[bool]): Whether to plot ROC curves. Default is False.</span>
+<span class="sd">        plot_roc_class (Optional[bool]): Whether to plot ROC curves for each class. Default is True.</span>
+<span class="sd">        plot_conf_matrix (Optional[bool]): Whether to plot the confusion matrix. Default is True.</span>
+<span class="sd">        pct_matrix (Optional[bool]): Whether to display the confusion matrix as percentages.</span>
+<span class="sd">                                     Default is True.</span>
+<span class="sd">        plot_class_report (Optional[bool]): Whether to print the classification report. Default is</span>
+<span class="sd">                                            True.</span>
+<span class="sd">        ret_eval_dict (Optional[bool]): Whether to return evaluation metrics as a dictionary.</span>
+<span class="sd">                                        Default is False.</span>
+<span class="sd">        predopts (Optional[Dict]): Additional options for prediction. Default is None.</span>
+<span class="sd">        save_name (Optional[str]): The name to save the plots. Default is None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Union[Dict,Tuple[ArrayLike, ArrayLike]]: The evaluation metrics or predicted labels</span>
+<span class="sd">                                                 and probabilities.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: If the data is not in the right format.</span>
+<span class="sd">        TypeError: If sklearn one-hot encoder is not provided when labels aren&#39;t already encoded.</span>
+<span class="sd">        ValueError: If the labels don&#39;t have dimensions that match the classes.</span>
+<span class="sd">        ValueError: If the list of classes provided doesn&#39;t match the dimensions of model</span>
+<span class="sd">                    predictions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">predopts</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">predopts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="p">(</span><span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">DatasetFolder</span><span class="p">)):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">l</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">X</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">))</span> <span class="ow">or</span>\
+        <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Data is not in the right format&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">class_l</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">class_l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">class_l</span><span class="p">))</span>
+    <span class="n">n_classes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">class_l</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ohe</span><span class="p">,</span> <span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">_encoders</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">)):</span>
+            <span class="n">y_ohe</span> <span class="o">=</span> <span class="n">ohe</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Sklearn one-hot encoder is a required parameter &quot;</span>
+                            <span class="s2">&quot;when labels aren&#39;t already encoded&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">y</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">kind</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;u&#39;</span><span class="p">]:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">class_l</span><span class="p">[</span><span class="n">o</span><span class="p">]]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)])</span>
+    <span class="k">elif</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">n_classes</span><span class="p">:</span>
+        <span class="n">y_ohe</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">class_l</span><span class="p">[</span><span class="n">o</span><span class="p">]]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y_ohe</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Labels don&#39;t have dimensions that match the classes&quot;</span><span class="p">)</span>
+    <span class="n">y_prob</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="o">**</span><span class="n">predopts</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y_prob</span><span class="p">,</span> <span class="n">sparse</span><span class="o">.</span><span class="n">csc_matrix</span><span class="p">):</span>
+        <span class="n">y_prob</span> <span class="o">=</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_prob</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">y_prob</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">y_prob</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">y_prob</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="o">**</span><span class="n">predopts</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">n_classes</span><span class="p">:</span>
+        <span class="n">y_pred_ord</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y_prob</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="p">[</span><span class="n">class_l</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">y_pred_ord</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;List of classes provided doesn&#39;t match &quot;</span>
+                         <span class="s2">&quot;the dimensions of model predictions&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">plot_roc</span><span class="p">:</span>
+        <span class="c1">#Compute FPR/TPR metrics for each class</span>
+        <span class="n">fpr</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">tpr</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">roc_auc</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+            <span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_ohe</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">y_prob</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">roc_auc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_ohe</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+        <span class="n">roc_auc</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">])</span>
+
+        <span class="c1"># Compute interpolated macro and micro</span>
+        <span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">)]))</span>
+        <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+            <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">],</span> <span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">]</span> <span class="o">/=</span> <span class="n">n_classes</span>
+        <span class="n">roc_auc</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">])</span>
+
+        <span class="c1"># Plot all ROCs</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">],</span>
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;micro-average ROC curve (area = </span><span class="si">{</span><span class="n">roc_auc</span><span class="p">[</span><span class="s2">&quot;micro&quot;</span><span class="p">]</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;navy&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">],</span>
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;macro-average ROC curve (area = </span><span class="si">{</span><span class="n">roc_auc</span><span class="p">[</span><span class="s2">&quot;macro&quot;</span><span class="p">]</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span>
+                 <span class="n">color</span><span class="o">=</span><span class="s1">&#39;deeppink&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">plot_roc_class</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                         <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;ROC for class </span><span class="si">{</span><span class="n">class_l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> (area = </span><span class="si">{</span><span class="n">roc_auc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span> <span class="c1"># coin toss line</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positive Rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">save_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_name</span><span class="o">+</span><span class="s1">&#39;_roc.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">plot_conf_matrix</span><span class="p">:</span>
+        <span class="n">conf_matrix</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">class_l</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">pct_matrix</span><span class="p">:</span>
+            <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">conf_matrix</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xticklabels</span><span class="o">=</span><span class="n">class_l</span><span class="p">,</span>\
+                        <span class="n">yticklabels</span><span class="o">=</span><span class="n">class_l</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.1%&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span><span class="mi">12</span><span class="p">})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xticklabels</span><span class="o">=</span><span class="n">class_l</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="n">class_l</span><span class="p">,</span>\
+                        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span><span class="mi">12</span><span class="p">})</span>
+        <span class="k">if</span> <span class="n">save_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_name</span><span class="o">+</span><span class="s1">&#39;_cm.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">plot_class_report</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">ret_eval_dict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">evaluate_multiclass_metrics_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ohe</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">y_prob</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="machine_learning_datasets.evaluate.evaluate_multiclass_metrics_mdl" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">evaluate_multiclass_metrics_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">ohe</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Evaluate multiclass classification metrics for a fitted model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fitted_model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseModelProtocol" href="../common/#machine_learning_datasets.common.BaseModelProtocol">BaseModelProtocol</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The fitted model to evaluate.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test_prob</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The predicted probabilities for each class.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test_pred</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The predicted class labels.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The true class labels.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ohe</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseTransformerProtocol" href="../common/#machine_learning_datasets.common.BaseTransformerProtocol">BaseTransformerProtocol</a>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The one-hot encoder transformer.
+                                               Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Dict</code></td>          <td>
+                <code><span title="typing.Dict">Dict</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A dictionary containing the evaluation metrics.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>machine_learning_datasets/evaluate.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_multiclass_metrics_mdl</span><span class="p">(</span>
+        <span class="n">fitted_model</span><span class="p">:</span><span class="n">BaseModelProtocol</span><span class="p">,</span>
+        <span class="n">y_test_prob</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test_pred</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">ohe</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="n">BaseTransformerProtocol</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluate multiclass classification metrics for a fitted model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fitted_model (BaseModelProtocol): The fitted model to evaluate.</span>
+<span class="sd">        y_test_prob (ArrayLike): The predicted probabilities for each class.</span>
+<span class="sd">        y_test_pred (ArrayLike): The predicted class labels.</span>
+<span class="sd">        y_test (ArrayLike): The true class labels.</span>
+<span class="sd">        ohe (Optional[BaseTransformerProtocol], optional): The one-hot encoder transformer.</span>
+<span class="sd">                                                           Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Dict: A dictionary containing the evaluation metrics.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">eval_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;fitted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitted_model</span>
+    <span class="k">if</span> <span class="n">y_test_prob</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;probs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test_prob</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;preds&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test_pred</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;precision&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span>\
+                                                     <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;recall&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span>\
+                                               <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;f1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;mcc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">matthews_corrcoef</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">y_test_prob</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ohe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;roc-auc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">ohe</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y_test</span><span class="p">),</span> <span class="n">y_test_prob</span><span class="p">,</span>\
+                                                         <span class="n">multi_class</span><span class="o">=</span><span class="s2">&quot;ovr&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;roc-auc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_prob</span><span class="p">,</span> <span class="n">multi_class</span><span class="o">=</span><span class="s2">&quot;ovr&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">eval_dict</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="machine_learning_datasets.evaluate.evaluate_reg_mdl" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">evaluate_reg_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">scaler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">plot_regplot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">y_truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">show_summary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ret_eval_dict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">predopts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">save_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Evaluate a regression model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fitted_model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseModelProtocol" href="../common/#machine_learning_datasets.common.BaseModelProtocol">BaseModelProtocol</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The fitted regression model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>X_train</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The training data features.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>X_test</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The testing data features.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_train</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The training data target variable.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The testing data target variable.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>scaler</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseTransformerProtocol" href="../common/#machine_learning_datasets.common.BaseTransformerProtocol">BaseTransformerProtocol</a>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The scaler to use for inverse transforming
+                                        the target variables. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plot_regplot</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to plot a regression plot. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_truncate</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to truncate the target variables to match the
+                         predicted values. Default is False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>show_summary</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to print the evaluation summary. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ret_eval_dict</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[bool]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to return the evaluation metrics as a dictionary.
+                            Default is False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>predopts</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional options for the predict method. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>save_name</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name to use for saving the regression plot. Default is None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.Tuple">Tuple</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, ...]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Union[Dict, Tuple[ArrayLike, ...]]: If ret_eval_dict is True, returns the evaluation</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.Tuple">Tuple</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, ...]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>metrics as a dictionary.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.Tuple">Tuple</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, ...]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If y_truncate is True, returns the predicted values and target variables for both</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.Tuple">Tuple</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, ...]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>training and testing data.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.Tuple">Tuple</span>[<span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span>, ...]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Otherwise, returns only the predicted values for both training and testing data.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>machine_learning_datasets/evaluate.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_reg_mdl</span><span class="p">(</span>
+        <span class="n">fitted_model</span><span class="p">:</span><span class="n">BaseModelProtocol</span><span class="p">,</span>
+        <span class="n">X_train</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">X_test</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_train</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">scaler</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="n">BaseTransformerProtocol</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">plot_regplot</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">y_truncate</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">show_summary</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">ret_eval_dict</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">predopts</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">save_name</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span><span class="n">Tuple</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">,</span> <span class="o">...</span> <span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluate a regression model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fitted_model (BaseModelProtocol): The fitted regression model.</span>
+<span class="sd">        X_train (ArrayLike): The training data features.</span>
+<span class="sd">        X_test (ArrayLike): The testing data features.</span>
+<span class="sd">        y_train (ArrayLike): The training data target variable.</span>
+<span class="sd">        y_test (ArrayLike): The testing data target variable.</span>
+<span class="sd">        scaler (Optional[BaseTransformerProtocol]): The scaler to use for inverse transforming</span>
+<span class="sd">                                                    the target variables. Default is None.</span>
+<span class="sd">        plot_regplot (Optional[bool]): Whether to plot a regression plot. Default is True.</span>
+<span class="sd">        y_truncate (Optional[bool]): Whether to truncate the target variables to match the</span>
+<span class="sd">                                     predicted values. Default is False.</span>
+<span class="sd">        show_summary (Optional[bool]): Whether to print the evaluation summary. Default is True.</span>
+<span class="sd">        ret_eval_dict (Optional[bool]): Whether to return the evaluation metrics as a dictionary.</span>
+<span class="sd">                                        Default is False.</span>
+<span class="sd">        predopts (Optional[Dict]): Additional options for the predict method. Default is None.</span>
+<span class="sd">        save_name (Optional[str]): The name to use for saving the regression plot. Default is None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Union[Dict, Tuple[ArrayLike, ...]]: If ret_eval_dict is True, returns the evaluation</span>
+<span class="sd">        metrics as a dictionary.</span>
+<span class="sd">        If y_truncate is True, returns the predicted values and target variables for both</span>
+<span class="sd">        training and testing data.</span>
+<span class="sd">        Otherwise, returns only the predicted values for both training and testing data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">predopts</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">predopts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">y_train_</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">y_test_</span> <span class="o">=</span> <span class="n">y_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">))</span> <span class="ow">or</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="o">**</span><span class="n">predopts</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">))</span> <span class="ow">or</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">fitted_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="o">**</span><span class="n">predopts</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">y_truncate</span><span class="p">:</span>
+        <span class="n">y_train_</span> <span class="o">=</span> <span class="n">y_train_</span><span class="p">[</span><span class="o">-</span><span class="n">y_train_pred</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:]</span>
+        <span class="n">y_test_</span> <span class="o">=</span> <span class="n">y_test_</span><span class="p">[</span><span class="o">-</span><span class="n">y_test_pred</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:]</span>
+    <span class="k">if</span> <span class="n">scaler</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">y_train_</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">y_train_</span><span class="p">)</span>
+        <span class="n">y_test_</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">y_test_</span><span class="p">)</span>
+        <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">y_train_pred</span><span class="p">)</span>
+        <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">y_test_pred</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">plot_regplot</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Predicted&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y_test_</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y_test_</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_test_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;g&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Observed&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">save_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_name</span><span class="o">+</span><span class="s1">&#39;_regplot.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">show_summary</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE_train: </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train_</span><span class="p">,</span><span class="w"> </span><span class="n">y_train_pred</span><span class="p">,</span><span class="w"> </span><span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">RMSE_test: </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test_</span><span class="p">,</span><span class="w"> </span><span class="n">y_test_pred</span><span class="p">,</span><span class="w"> </span><span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">r2: </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_test_</span><span class="p">,</span><span class="w"> </span><span class="n">y_test_pred</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ret_eval_dict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">evaluate_reg_metrics_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">y_train_</span><span class="p">,</span> <span class="n">y_test_</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">y_truncate</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">y_train_</span><span class="p">,</span> <span class="n">y_test_</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">y_test_pred</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="machine_learning_datasets.evaluate.evaluate_reg_metrics_mdl" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">evaluate_reg_metrics_mdl</span><span class="p">(</span><span class="n">fitted_model</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Evaluates regression metrics for a fitted model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fitted_model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="machine_learning_datasets.common.BaseModelProtocol" href="../common/#machine_learning_datasets.common.BaseModelProtocol">BaseModelProtocol</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The fitted model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_train_pred</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Predicted values for the training set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test_pred</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Predicted values for the test set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_train</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True values for the training set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y_test</code></td>
+          <td>
+                <code><span title="machine_learning_datasets.common.ArrayLike">ArrayLike</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True values for the test set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>dict</code></td>          <td>
+                <code><span title="typing.Dict">Dict</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A dictionary containing the following evaluation metrics:
+- 'fitted': The fitted model.
+- 'preds_train': Predicted values for the training set.
+- 'preds_test': Predicted values for the test set.
+- 'trues_train': True values for the training set.
+- 'trues_test': True values for the test set.
+- 'rmse_train': Root mean squared error for the training set.
+- 'rmse_test': Root mean squared error for the test set.
+- 'r2_train': R-squared score for the training set.
+- 'r2_test': R-squared score for the test set.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>machine_learning_datasets/evaluate.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_reg_metrics_mdl</span><span class="p">(</span>
+        <span class="n">fitted_model</span><span class="p">:</span><span class="n">BaseModelProtocol</span><span class="p">,</span>
+        <span class="n">y_train_pred</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test_pred</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_train</span><span class="p">:</span><span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">y_test</span><span class="p">:</span><span class="n">ArrayLike</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluates regression metrics for a fitted model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fitted_model (BaseModelProtocol): The fitted model.</span>
+<span class="sd">        y_train_pred (ArrayLike): Predicted values for the training set.</span>
+<span class="sd">        y_test_pred (ArrayLike): Predicted values for the test set.</span>
+<span class="sd">        y_train (ArrayLike): True values for the training set.</span>
+<span class="sd">        y_test (ArrayLike): True values for the test set.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: A dictionary containing the following evaluation metrics:</span>
+<span class="sd">            - &#39;fitted&#39;: The fitted model.</span>
+<span class="sd">            - &#39;preds_train&#39;: Predicted values for the training set.</span>
+<span class="sd">            - &#39;preds_test&#39;: Predicted values for the test set.</span>
+<span class="sd">            - &#39;trues_train&#39;: True values for the training set.</span>
+<span class="sd">            - &#39;trues_test&#39;: True values for the test set.</span>
+<span class="sd">            - &#39;rmse_train&#39;: Root mean squared error for the training set.</span>
+<span class="sd">            - &#39;rmse_test&#39;: Root mean squared error for the test set.</span>
+<span class="sd">            - &#39;r2_train&#39;: R-squared score for the training set.</span>
+<span class="sd">            - &#39;r2_test&#39;: R-squared score for the test set.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">eval_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;fitted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitted_model</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;preds_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_train_pred</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;preds_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test_pred</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;trues_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_train</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;trues_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_test</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;rmse_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;rmse_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;r2_train&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span>
+    <span class="n">eval_dict</span><span class="p">[</span><span class="s1">&#39;r2_test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">eval_dict</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>
