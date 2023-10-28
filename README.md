@@ -13,3 +13,7 @@ Can be found at [pypi.org](https://pypi.org/project/machine-learning-datasets/#d
 ``` sh
 pip install machine-learning-datasets
 ```
+
+## Documentation
+
+You can find a detailed documentation of the package functionality at [github.io](https://smasis001.github.io/Machine-Learning-Datasets/).
